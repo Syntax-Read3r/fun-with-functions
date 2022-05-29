@@ -139,7 +139,24 @@ let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
+  //Initiate multiplication result and the sentence;
+  let res = [1, null];
+  let sentence = `The numbers `;
+
+  //Iterate through the array and change number dataType to string at location[x] if dynamicArray.length exceeds x.index.
+  for(let x in dynamicArray) {
+    res = multiply(res[0],dynamicArray[x]);
+    if(x < dynamicArray.length - 1) {
+      sentence += `${dynamicArray[x]},`;
+    }else {
+      sentence += `${dynamicArray[x]} `;
+      sentence += `have a product of ${res}.`;
+    }
+  }
+  return [res[0], sentence];
 }
+
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
