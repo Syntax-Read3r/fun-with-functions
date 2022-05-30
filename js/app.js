@@ -150,7 +150,7 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
       sentence += `${dynamicArray[x]},`;
     }else {
       sentence += `${dynamicArray[x]} `;
-      sentence += `have a product of ${res}.`;
+      sentence += `have a product of ${res[0]}.`;
     }
   }
   return [res[0], sentence];
@@ -159,6 +159,6 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
